@@ -13,7 +13,7 @@ import { GeneralQueryEnum } from '@/pages/api/general';
 type Query = Record<keyof typeof GeneralQueryEnum | 'ogType', string>;
 
 export default function BuildPage() {
-  const [link, setLink] = React.useState('https://og-pi.vercel.app/api/general');
+  const [link, setLink] = React.useState('https://opengraph-psi.vercel.app/api/general');
   const [imgLink, setImgLink] = React.useState(
     'https://og-pi.vercel.app/api/general'
   );
@@ -34,7 +34,7 @@ export default function BuildPage() {
     const { ogType, ...rest } = formData;
     const qurl = queryString.stringifyUrl(
       {
-        url: `https://og-pi.vercel.app/api/${ogType}`,
+        url: `https://opengraph-psi.vercel.app/api/${ogType}`,
         query: { ...rest },
       },
       {
