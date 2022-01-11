@@ -129,7 +129,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
   }
 
   .gradient {
-    background-image: linear-gradient(to top right, #b9131a, #ff9999);
+    background-image: linear-gradient(to top right, #b9131a, #ff5050);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
