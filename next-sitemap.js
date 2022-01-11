@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://og.thcl.dev/',
+  siteUrl: 'https://opengraph-psi.vercel.app/',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],

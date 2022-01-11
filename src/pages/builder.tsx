@@ -15,14 +15,14 @@ type Query = Record<keyof typeof GeneralQueryEnum | 'ogType', string>;
 export default function BuildPage() {
   const [link, setLink] = React.useState('https://opengraph-psi.vercel.app/api/general');
   const [imgLink, setImgLink] = React.useState(
-    'https://og-pi.vercel.app/api/general'
+    'https://opengraph-psi.vercel.app/api/general'
   );
 
   //#region  //*=========== Forms ===========
   const methods = useForm<Query>({
     mode: 'onTouched',
     defaultValues: {
-      theme: 'dark',
+      theme: 'light',
     },
   });
   const { handleSubmit, watch } = methods;
