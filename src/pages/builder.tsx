@@ -13,9 +13,9 @@ import { GeneralQueryEnum } from '@/pages/api/general';
 type Query = Record<keyof typeof GeneralQueryEnum | 'ogType', string>;
 
 export default function BuildPage() {
-  const [link, setLink] = React.useState('https://og.thcl.dev/api/general');
+  const [link, setLink] = React.useState('https://og-pi.vercel.app/api/general');
   const [imgLink, setImgLink] = React.useState(
-    'https://og.thcl.dev/api/general'
+    'https://og-pi.vercel.app/api/general'
   );
 
   //#region  //*=========== Forms ===========
@@ -34,7 +34,7 @@ export default function BuildPage() {
     const { ogType, ...rest } = formData;
     const qurl = queryString.stringifyUrl(
       {
-        url: `https://og.thcl.dev/api/${ogType}`,
+        url: `https://og-pi.vercel.app/api/${ogType}`,
         query: { ...rest },
       },
       {
@@ -84,7 +84,7 @@ export default function BuildPage() {
                     <Input
                       id='logo'
                       label='Logo Links'
-                      helperText='default: https://og.thcl.dev/images/logo.jpg'
+                      helperText='default: https://ndt-vn.com/favicon.png'
                     />
                     <Input
                       id='banner'
