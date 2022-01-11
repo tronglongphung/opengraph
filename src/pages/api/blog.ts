@@ -177,8 +177,8 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
     color: #F3F4F6;
   }
   .right img {
-    height: 83vh;
-    width: auto;
+    height: auto;
+    max-width: 50vw;
     display: block;
   }
 </style>
