@@ -129,7 +129,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
   }
 
   .gradient {
-    background-image: linear-gradient(to top right, #00e887, #00e0f3);
+    background-image: linear-gradient(to top right, #b9131a, #00e0f3);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -152,7 +152,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
     font-weight: 400;
   }
   .title {
-    font-weight: 450;
+    font-weight: 500;
     font-size: 3rem;
     line-height: 1.3;
     margin-top: 1rem;
@@ -168,7 +168,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
     border-radius: 100%;
   }
   .name {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.6rem;
   }
   .twitter {
@@ -177,7 +177,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
     color: #F3F4F6;
   }
   .right img {
-    height: 83vh;
+    height: 82vh;
     width: auto;
     display: block;
   }
