@@ -29,9 +29,9 @@ export default function HomePage() {
             </div>
 
             <footer className='absolute text-gray-800 bottom-2'>
-              © {new Date().getFullYear()} By{' '}
-              <CustomLink href='https://theodorusclarence.com?ref=og'>
-                Theodorus Clarence
+              {new Date().getFullYear()} By{' '}
+              <CustomLink href='https://ndt-vn.com'>
+                Tom
               </CustomLink>
             </footer>
           </div>
