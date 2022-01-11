@@ -52,9 +52,9 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
                     </span>
                   </h1>
                   <div class="social">
-                    <img class="social_img" src="https://ndt-vn.com/logo.png">
+                    <img class="social_img" src="https://ndt-vn.com/favicon.png">
                     <div class="social_info">
-                      <p class="name">Quốc Huy Technique</p>
+                      <p class="name">Quoc Huy Technique</p>
                     </div>
                   </div>
                 </div>

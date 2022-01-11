@@ -24,7 +24,7 @@ export default withOGImage<'query', keyof typeof GeneralQueryEnum>({
       const query = {
         siteName: siteName ?? 'Site Name',
         description: description ?? 'Description',
-        logo: logo ?? 'https://ndt-vn.com/logo.png',
+        logo: logo ?? 'https://ndt-vn.com/favicon.png',
         theme: theme ?? 'light',
         templateTitle,
         logoWidth: logoWidth ?? '100',
