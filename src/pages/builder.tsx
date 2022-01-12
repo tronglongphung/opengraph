@@ -71,7 +71,7 @@ export default function BuildPage() {
                       helperText='api type routes'
                     >
                       <option value='general'>general</option>
-                      <option value='gradient'>gradient</option>
+                      <option value='product'>product</option>
                       <option value='blog'>blog</option>
                     </SelectInput>
                     <Input id='siteName' label='siteName' />

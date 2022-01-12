@@ -8,6 +8,7 @@ enum QueryEnum {
   'templateTitle',
   'logoWidth',
   'logoHeight',
+  'banner',
 }
 
 export default withOGImage<'query', keyof typeof QueryEnum>({
@@ -20,15 +21,17 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
       templateTitle,
       logoWidth,
       logoHeight,
+      banner,
     }) => {
       const query = {
         siteName: siteName ?? 'Site Name',
         description: description ?? 'Description',
-        logo: logo ?? 'https://ndt-vn.com/favicon.png',
+        logo: logo ?? 'https://ndt-vn.com/logo.png',
         theme: theme ?? 'light',
         templateTitle,
         logoWidth: logoWidth ?? '100',
         logoHeight,
+        banner,
       };
 
       return `
@@ -38,23 +41,27 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
           </head>
           <body>
             <div class="container">
-              <img src="${query.logo}" alt="Favicon" />
-              ${
-                query.templateTitle
-                  ? `<h1>
-                  ${query.theme === 'dark' ? '<span class="gradient">' : ''}
-                  ${query.templateTitle}
-                  ${query.theme === 'dark' ? '</span>' : ''}
+              <div class="split">
+                <div class="left">
+                  <h3 class="link">
+                    ndt-vn.com/products
+                  </h3>
+                  <h1 class="title">
+                    <span class="gradient">
+                      ${query.templateTitle ?? 'Blog Title'}
+                    </span>
                   </h1>
-                  <h3>${query.siteName}</h3>`
-                  : `<h1>
-                  ${query.theme === 'dark' ? '<span class="gradient">' : ''}
-                  ${query.siteName}
-                  ${query.theme === 'dark' ? '</span>' : ''}
-                  </h1>`
-              }
-              
-              <p class="description">${query.description}</p>
+                  <div class="social">
+                    <img class="social_img" src="https://ndt-vn.com/favicon.png">
+                    <div class="social_info">
+                      <p class="name">Quoc Huy Technique</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">${
+                  banner ? `<img src="${banner}" />` : ''
+                }</div>
+              </div>
             </div>
           </body>
         </html>
@@ -62,7 +69,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
     },
   },
   dev: {
-    inspectHtml: false,
+    inspectHtml: true,
   },
 });
 
@@ -105,12 +112,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
     color: ${query.theme === 'dark' ? 'white' : 'black'};
 
     text-align: center;
-    padding: 0 5rem;
-  }
-
-  img {
-    width: ${query.logoWidth}px;
-    ${query.logoHeight && `height: ${query.logoHeight}px`}
+    padding: 4rem 3rem;
   }
 
   h1 {
@@ -127,17 +129,57 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
   }
 
   .gradient {
-    background-image: linear-gradient(to top right, #00e887, #00e0f3);
+    background-image: linear-gradient(to top right, #b9131a, #ff5050);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
   }
   
-  .description {
-    font-size: 1.8rem;
-    line-height: 1.5;
+  .split {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+  .left {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .link {
+    font-weight: 400;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.3;
     margin-top: 1rem;
-    color: ${query.theme === 'dark' ? '#D1D5DB' : '#1F2937'};
+  }
+  .social {
+    display: flex;
+    margin-top: auto;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .social_img {
+    width: 80px;
+    border-radius: 100%;
+  }
+  .name {
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  .twitter {
+    font-size: 1.3rem;
+    margin-top: 0.1rem;
+    color: #F3F4F6;
+  }
+  .right img {
+    height: auto;
+    max-width: 50vw;
+    display: block;
   }
 </style>
 `;
