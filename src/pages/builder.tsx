@@ -13,7 +13,9 @@ import { GeneralQueryEnum } from '@/pages/api/general';
 type Query = Record<keyof typeof GeneralQueryEnum | 'ogType', string>;
 
 export default function BuildPage() {
-  const [link, setLink] = React.useState('https://opengraph-psi.vercel.app/api/general');
+  const [link, setLink] = React.useState(
+    'https://opengraph-psi.vercel.app/api/general'
+  );
   const [imgLink, setImgLink] = React.useState(
     'https://opengraph-psi.vercel.app/api/general'
   );
@@ -84,7 +86,7 @@ export default function BuildPage() {
                     <Input
                       id='logo'
                       label='Logo Links'
-                      helperText='default: https://ndt-vn.com/favicon.png'
+                      helperText='default: https://www.ndt-vn.com/logo.png'
                     />
                     <Input
                       id='banner'

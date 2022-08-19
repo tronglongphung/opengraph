@@ -26,7 +26,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
       const query = {
         siteName: siteName ?? 'Site Name',
         description: description ?? 'Description',
-        logo: logo ?? 'https://ndt-vn.com/logo.png',
+        logo: logo ?? 'https://www.ndt-vn.com/logo.png',
         theme: theme ?? 'light',
         templateTitle,
         logoWidth: logoWidth ?? '100',
@@ -42,7 +42,10 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
           <body>
             <div class="container">
               <div class="split">
-                <div class="left">
+               <div class="left">${
+                 banner ? `<img src="${banner}" />` : ''
+               }</div>
+                <div class="right">
                   <h3 class="link">
                     ndt-vn.com/products
                   </h3>
@@ -52,15 +55,13 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
                     </span>
                   </h1>
                   <div class="social">
-                    <img class="social_img" src="https://ndt-vn.com/favicon.png">
+                    <img class="social_img" src="https://ndt-vn.com/logo.png">
                     <div class="social_info">
                       <p class="name">Quoc Huy Technique</p>
                     </div>
                   </div>
                 </div>
-                <div class="right">${
-                  banner ? `<img src="${banner}" />` : ''
-                }</div>
+               
               </div>
             </div>
           </body>

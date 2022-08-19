@@ -12,7 +12,7 @@ export function openGraph({
   siteName,
   templateTitle,
   description,
-  logo = 'https://ndt-vn.com/favicon.png',
+  logo = 'https://ndt-vn.com/logo.png',
 }: OpenGraphType): string {
   const ogLogo = encodeURIComponent(logo);
   const ogSiteName = encodeURIComponent(siteName.trim());
