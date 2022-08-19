@@ -41,28 +41,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
           </head>
           <body>
             <div class="container">
-              <div class="split">
-               <div class="left">${
-                 banner ? `<img src="${banner}" />` : ''
-               }</div>
-                <div class="right">
-                  <h3 class="link">
-                    ndt-vn.com/products
-                  </h3>
-                  <h1 class="title">
-                    <span class="gradient">
-                      ${query.templateTitle ?? 'Blog Title'}
-                    </span>
-                  </h1>
-                  <div class="social">
-                    <img class="social_img" src="https://ndt-vn.com/logo.png">
-                    <div class="social_info">
-                      <p class="name">Quoc Huy Technique</p>
-                    </div>
-                  </div>
-                </div>
-               
-              </div>
+               <div>${banner ? `<img src="${banner}" />` : ''}</div>
             </div>
           </body>
         </html>
