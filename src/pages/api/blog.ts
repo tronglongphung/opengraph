@@ -174,7 +174,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
     align-items: center;
   }
   .social_img {
-    width: 90px;
+    width: 150px;
   }
   .name {
     font-weight: 700;
