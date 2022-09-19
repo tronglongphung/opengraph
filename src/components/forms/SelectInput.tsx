@@ -33,19 +33,6 @@ export default function SelectInput({
 
   const value = watch(id);
 
-  // Add disabled and selected attribute to option, will be used if readonly
-  const readOnlyChildren = React.Children.map<React.ReactNode, React.ReactNode>(
-    children,
-    (child) => {
-      if (React.isValidElement(child)) {
-        return React.cloneElement(child, {
-          disabled: child.props.value !== rest?.defaultValue,
-          // selected: child.props.value === rest?.defaultValue,
-        });
-      }
-    }
-  );
-
   return (
     <div className={clsx(className)}>
       <label htmlFor={id} className='block text-sm font-normal text-gray-700'>
@@ -75,7 +62,7 @@ export default function SelectInput({
               {placeholder}
             </option>
           )}
-          {readOnly ? readOnlyChildren : children}
+          {children}
         </select>
 
         {errors[id] && (
