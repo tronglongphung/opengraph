@@ -53,9 +53,6 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
                   </h1>
                   <div class="social">
                     <img class="social_img" src="https://ndt-vn.com/logo.png">
-                    <div class="social_info">
-                      <p class="name">Quoc Huy Technique</p>
-                    </div>
                   </div>
                 </div>
                 <div class="right">${
@@ -177,8 +174,7 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
     align-items: center;
   }
   .social_img {
-    width: 80px;
-    border-radius: 100%;
+    width: 90px;
   }
   .name {
     font-weight: 700;

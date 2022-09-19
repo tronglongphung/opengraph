@@ -13,8 +13,6 @@
 }
 
 @layer base {
-  /* inter var - latin */
-
   @font-face {
     font-family: 'Gilroy';
     src: url('/fonts/GilroyRegular.woff2');
