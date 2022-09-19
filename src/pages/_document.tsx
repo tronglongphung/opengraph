@@ -14,11 +14,32 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='en'>
+      <Html lang='vi'>
         <Head>
           <link
             rel='preload'
-            href='/fonts/inter-var-latin.woff2'
+            href='/fonts/GilroyRegular.woff2'
+            as='font'
+            type='font/woff2'
+            crossOrigin='anonymous'
+          />
+          <link
+            rel='preload'
+            href='/fonts/GilroySemiBold.woff2'
+            as='font'
+            type='font/woff2'
+            crossOrigin='anonymous'
+          />
+          <link
+            rel='preload'
+            href='/fonts/GilroyBold.woff2'
+            as='font'
+            type='font/woff2'
+            crossOrigin='anonymous'
+          />
+          <link
+            rel='preload'
+            href='/fonts/GilroyHeavy.woff2'
             as='font'
             type='font/woff2'
             crossOrigin='anonymous'

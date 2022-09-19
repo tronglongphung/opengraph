@@ -24,6 +24,69 @@
       U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
       U+2215, U+FEFF, U+FFFD;
   }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroyRegular.woff2');
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroyMedium.woff2');
+    font-weight: 500;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroySemiBold.woff2');
+    font-weight: 600;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroyBold.woff2');
+    font-weight: 700;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroyHeavy.woff2');
+    font-weight: 800;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroyBlack.woff2');
+    font-weight: 900;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroyItalic.woff2');
+    font-style: italic;
+    font-weight: 500;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroyMediumItalic.woff2');
+    font-style: italic;
+    font-weight: 600;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroySemiBoldItalic.woff2');
+    font-style: italic;
+    font-weight: 700;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/GilroyBoldItalic.woff2');
+    font-style: italic;
+    font-weight: 800;
+    font-display: fallback;
+  }
 
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
