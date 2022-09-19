@@ -67,25 +67,25 @@ const getStyle = (query: Record<keyof typeof QueryEnum, string | string[]>) => `
   @font-face {
     font-family: 'Gilroy';
     src: url('/fonts/GilroyRegular.woff2');
-    font-display: fallback;
+    font-display: optional;
   }
   @font-face {
     font-family: 'Gilroy';
     src: url('/fonts/GilroyMedium.woff2');
     font-weight: 500;
-    font-display: fallback;
+    font-display: optional;
   }
   @font-face {
     font-family: 'Gilroy';
     src: url('/fonts/GilroySemiBold.woff2');
     font-weight: 600;
-    font-display: fallback;
+    font-display: optional;
   }
   @font-face {
     font-family: 'Gilroy';
     src: url('/fonts/GilroyBold.woff2');
     font-weight: 700;
-    font-display: fallback;
+    font-display: optional;
   }
 
   body {
